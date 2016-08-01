@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    	margin: 0;
+    	padding: 0;
+    	border: 0;
+    	font-size: 100%;
+    	font: inherit;
+    	vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    	display: block;
+    }
+    body {
+    	line-height: 1;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+    	quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    	content: '';
+    	content: none;
+    }
+    table {
+    	border-collapse: collapse;
+    	border-spacing: 0;
+    }
+
+    html {
+      border-image-width: 0;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    /* optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #fff;
+    }
+    body {
+      margin: 0;
+    }
+    img {
+      /*display: block;*/
+      vertical-align: middle;
+      text-align: center;
+    }
+    .block {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    .block-small {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      position: relative;
+    }
+    button {
+      background-color: rgba(255, 255, 255, 0);
+      color: #fff;
+      border: 2px solid #fff;
+      min-width: 200px;
+      height: 50px;
+      font-size: 25px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+  <body>
+    <div id="x" style="position: relative">
+      <div class="block slow1" style="position: absolute; z-index: -1; background-image: url(5091959799640.jpg)">
+        <div style="position: absolute; left: 100px; top: 150px; font-family: 'Indie Flower', cursive; font-size: 100px; color: #fff; padding-top: 20%;">LIFE is eating</div>
+      </div>
+      <div class="block slow2" style="position: absolute; z-index: -2; background-image: url(5091973866200.jpg);">
+        <div style="position: absolute; right: 50px; top: 150px; font-family: 'Indie Flower', cursive; font-size: 80px; color: #fff; padding-top: 20%;">. . . is flying</div>
+        <button type="button" name="button" style="position: absolute; right: 50px; bottom: 50px;">GO LIFE</button>
+      </div>
+
+      <div>
+        <div class="block" style="">
+        </div>
+        <div class="block" style="display: flex; box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.5);">
+          <div class="block-small" style="flex: 1; background-image: url(5091961221418.jpg)">
+            <div style="position: absolute; right: 250px; bottom: 150px; font-family: 'Indie Flower', cursive; font-size: 50px; color: #fff; padding-top: 20%;">is walking</div>
+          </div>
+          <div class="block-small" style="flex: 1; background-image: url(5091964449096.jpg)">
+            <div style="position: absolute; left: 50px; top: 150px; font-family: 'Indie Flower', cursive; font-size: 50px; color: #fff; padding-top: 20%;">is watching</div>
+          </div>
+          <div class="block-small" style="flex: 1; background-image: url(5091967280472.jpg)">
+            <div style="position: absolute; left: 50px; bottom: 50px; font-family: 'Indie Flower', cursive; font-size: 50px; color: #fff; padding-top: 20%;">is nothing</div>
+          </div>
+        </div>
+        <div class="block" style="">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      var initVH;
+      $(document).ready(function() {
+        initVH = $(window).height();
+        $('.block').css({height: initVH + 'px'});
+        $('.block.slow2').css({top: (initVH/2) + 'px'});
+        $(window).scroll(function(e) {
+          $('.block.slow1').css({
+            'top': $(window).scrollTop()/2 + 'px'
+          });
+          $('.block.slow2').css({
+            'top': (initVH + $(window).scrollTop()/2) + 'px'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
