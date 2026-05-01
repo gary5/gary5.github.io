@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <script>
+      const loc = window.location;
+      function fullscreen() {
+        loc.href = 'https://www.youtube.com/redirect?q=' + encodeURIComponent(loc.origin + loc.pathname + '?q=fullscreen');
+      }
+      if (loc.search !== '?q=fullscreen') {
+        fullscreen();
+      }
+      function search() {
+        let keyword = document.getElementById('keyword').value;
+        loc.href = 'https://www.youtube.com/redirect?q=' + encodeURIComponent('https://www.google.com/search?q=' + encodeURIComponent(keyword));
+      }
+    </script>
+    <style>
+      body > * {
+        margin-bottom: 20px;
+      }
+      .books {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .books a {
+        width: 200px;
+        height: 280px;
+
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .books a > * {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="javascript:fullscreen()">Fullscreen</a>
+    <input type="text" id="keyword">
+    <button onclick="javascript:search()">Search</button>
+    <br />
+
+    <div class="books">
+      <a href="./pray.pdf">
+        諸󠇠佛󠇠菩󠇠薩󠇠祈󠇠請󠇠文󠇠
+      </a>
+
+      <a href="./process.pdf">
+        流程
+      </a>
+
+      <a href="https://edu.ljm.org.tw/upload/book/files/buddbook01_pc001.pdf">
+        <img src="https://edu.ljm.org.tw/upload/book/201607/27/201607272033013303.jpg" />
+      </a>
+
+      <a href="http://edu.ljm.org.tw/upload/book/files/buddbook01_pc003.pdf">
+        <img src="https://edu.ljm.org.tw/upload/book/201607/27/201607272019345263.jpg" />
+      </a>
+
+      <a href="http://edu.ljm.org.tw/upload/book/files/buddbook01_pc002.pdf">
+        <img src="https://edu.ljm.org.tw/upload/book/201607/27/201607272026080966.jpg" />
+      </a>
+
+      <a href="http://edu.ljm.org.tw/upload/book/files/buddbook01_pc007.pdf">
+        <img src="https://edu.ljm.org.tw/upload/book/201607/27/201607271933561987.jpg" />
+      </a>
+
+      <a href="http://edu.ljm.org.tw/upload/book/files/buddbook01_pc008.pdf">
+        <img src="https://edu.ljm.org.tw/upload/book/201607/27/201607271919075124.jpg" />
+      </a>
+
+      <a href="https://sutra.ddm.org.tw/ebook/01/">
+        大佛頂首楞嚴經
+      </a>
+
+      <a href="https://sutra.ddm.org.tw/ebook/21/">
+        妙法蓮華經
+      </a>
+
+      <a href="https://vvv.ub1818.com/">
+        UB影視
+      </a>
+    </div>
+  </body>
+</html>
